@@ -1,0 +1,33 @@
+<script>
+export default {
+  data() {
+    return {
+      step: 1,
+      formReg: {
+        name: '',
+        surname: '',
+        email: '',
+        password: '',
+        passwordConfirm: '',
+        numberphone: '',
+        dateofbirth: ''
+      }
+    }
+  },
+  methods: {
+    nextStep() {
+      if (this.step < 3) {
+        this.step++
+      }
+    },
+    backStep() {
+      if (this.step > 1) {
+        this.step--
+      }
+    },
+    registerUser() {
+      console.log('Пользователь зарегистрирован!')
+    }
+  }
+}
+</script>

@@ -7,19 +7,42 @@ import datetime
 from sqlalchemy import Index, Column, Date, DateTime, func
 
 from fastapi import FastAPI
+from pydantic import BaseModel
+from sqlalchemy.orm import sessionmaker
+"""
+class Item(BaseModel):
+    name: str
+    description: str | None = None
+    price: float
+    tax: float | None = None
+
+
+app = FastAPI()
+
+
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Item, q: str | None = None):
+    result = {"item_id": item_id, **item.dict()}
+    if q:
+        result.update({"q": q})
+    return result
+"""
+
 
 # строка подключения
 SQLALCHEMY_DATABASE_URL = "postgresql://admin:root@localhost:5433/postgres_flow"
 
 # создаем движок SqlAlchemy
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
-
+engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
+)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 #создаем базовый класс для моделей
 Base = declarative_base()
 
+
 # создаем модель, объекты которой будут храниться в бд
 # Определяем модели для таблиц
-class OrderStatus(Enum):
+ class OrderStatus(Enum):
     RESERVED = 'Reserved'
     PROCESSING = 'Processing'
     ASSEMBLING = 'Assembling'
@@ -157,6 +180,13 @@ Index('idx_order_product_id', Order.product_id)
 
 # Создаем таблицы
 Base.metadata.create_all(bind=engine)
+"""
 
+"""
 # приложение, которое ничего не делает
 app = FastAPI()
+
+@app.get('/api/notification')
+def get_notification():
+    pass
+"""
