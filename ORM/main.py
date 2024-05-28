@@ -1,24 +1,15 @@
-# -*- coding: cp1251 -*-
-from fastapi import Depends, FastAPI, HTTPException, Request, APIRouter
+from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
-
-
-from sql_app.models import User
-
-from flask import Flask,render_template,flash, redirect,url_for,session,logging,request
-
-from sql_app import crud, models, schemas
-from sql_app.database import SessionLocal, engine
-
 from fastapi.middleware.cors import CORSMiddleware
+from uvicorn import main as uvicorn_main
 
-models.Base.metadata.create_all(bind=engine)
+from sql_app import SessionLocal, crud, schemas
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # �������� ����� Vue
+    allow_origins=["http://localhost:5173"],  # значение порта Vue
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
@@ -68,10 +59,33 @@ def read_items(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     items = crud.get_items(db, skip=skip, limit=limit)
     return items
 
+
 @app.post("/register")
 def register(user: schemas.UserCreate, db: Session = Depends(get_db)):
-    db_user = crud.get_user_by_email(db, email=user.email)
-    if db_user:
-        raise HTTPException(status_code=400, detail="Email already registered")
-    return crud.create_user(db=db, user=user)
+    try:
+        db_user = crud.get_user_by_email(db, email=user.email)
+        if db_user:
+            raise HTTPException(status_code=400, detail="Email already registered")
+        return crud.create_user(db=db, user=user)
+    except Exception as e:
+        # Печатаем дополнительные сведения об ошибке
+        print(f"An error occurred: {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
 
+
+# Новые конечные точки для работы с изображениями
+@app.post("/flowers/", response_model=schemas.Flower)
+def create_flower(flower: schemas.FlowerCreate, db: Session = Depends(get_db)):
+    return crud.create_flower(db=db, flower=flower)
+
+@app.get("/flowers/", response_model=list[schemas.Flower])
+def read_flowers(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    flowers = crud.get_flowers(db, skip=skip, limit=limit)
+    return flowers
+
+@app.get("/flowers/{flower_id}", response_model=schemas.Flower)
+def read_flower(flower_id: int, db: Session = Depends(get_db)):
+    db_flower = crud.get_flower(db, flower_id=flower_id)
+    if db_flower is None:
+        raise HTTPException(status_code=404, detail="Flower not found")
+    return db_flower

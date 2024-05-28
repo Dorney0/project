@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 
-from sql_app import models, schemas
+from sql_app import models
+from sql_app import schemas
 
 
 def get_user(db: Session, user_id: int):
@@ -34,3 +35,18 @@ def create_user_item(db: Session, item: schemas.ItemCreate, user_id: int):
     db.commit()
     db.refresh(db_item)
     return db_item
+
+
+# Новые функции для работы с изображениями
+def create_flower(db: Session, flower: schemas.FlowerCreate):
+    db_flower = models.Flower(name=flower.name, image_url=flower.image_url, price=flower.price)
+    db.add(db_flower)
+    db.commit()
+    db.refresh(db_flower)
+    return db_flower
+
+def get_flower(db: Session, flower_id: int):
+    return db.query(models.Flower).filter(models.Flower.id == flower_id).first()
+
+def get_flowers(db: Session, skip: int = 0, limit: int = 100):
+    return db.query(models.Flower).offset(skip).limit(limit).all()

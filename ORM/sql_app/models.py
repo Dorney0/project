@@ -1,8 +1,9 @@
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, DateTime
 from sqlalchemy.orm import relationship
-
-from sql_app.database import Base
 from sqlalchemy.sql import func
+
+from .database import Base
+
 
 class BaseModel(Base):
     __abstract__ = True
@@ -31,3 +32,9 @@ class Item(BaseModel):
     owner = relationship("User", back_populates="items")
 
 
+class Flower(Base):
+    __tablename__ = "flowers"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, index=True)
+    image_url = Column(String, index=True)
+    price = Column(Integer)

@@ -33,3 +33,18 @@ class User(UserBase):
 
     class Config:
         from_attributes = True
+
+
+class FlowerBase(BaseModel):
+    name: str
+    image_url: str
+    price: int
+
+class FlowerCreate(FlowerBase):
+    pass
+
+class Flower(FlowerBase):
+    id: int
+
+    class Config:
+        from_attributes = True

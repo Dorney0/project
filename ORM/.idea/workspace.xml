@@ -2,17 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="deb75df7-63d8-46c9-b762-9c3a5b0c20bb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ORM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ORM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql_app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/sql_app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql_app/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/sql_app/crud.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql_app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/sql_app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/sql_app/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql_app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sql_app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql_app/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/sql_app/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/1247" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/1247" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/1249" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/1249" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/1259" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/1259" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/1259_fsm" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/1259_fsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/1259_vm" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/1259_vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2224" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2224" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/24602" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/24602" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/24603" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/24603" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/24610" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/24610" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/24612" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/24612" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2579" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2579" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2604" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2604" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2606" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2606" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2608" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2608" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2610" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2610" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2619" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2619" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2619_fsm" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2619_fsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2619_vm" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2619_vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2620" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2620" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2656" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2656" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2657" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2657" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2658" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2658" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2659" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2659" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2662" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2662" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2663" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2663" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2664" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2664" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2665" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2665" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2666" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2666" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2667" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2667" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2673" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2673" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2674" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2674" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2678" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2678" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2679" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2679" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2696" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2696" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2699" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2699" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2701" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2701" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2702" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2702" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2703" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2703" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2704" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2704" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2840" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2840" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2840_vm" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2840_vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2841" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/2841" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/3455" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/3455" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/5002" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/5002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/pg_internal.init" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/base/13769/pg_internal.init" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/global/pg_control" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/global/pg_control" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/global/pg_internal.init" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/global/pg_internal.init" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/pg_stat_tmp/db_0.stat" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/pg_stat_tmp/db_0.stat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/pg_stat_tmp/db_13769.stat" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/pg_stat_tmp/db_13769.stat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/pg_stat_tmp/global.stat" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/pg_stat_tmp/global.stat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/pg_wal/000000010000000000000001" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/pg_wal/000000010000000000000001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/pg_xact/0000" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/pg_xact/0000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/pgdata/postmaster.pid" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/pgdata/postmaster.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/public/white_roses.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/src/components/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/src/components/Card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/src/components/CardList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/src/components/CardList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/src/components/Drawer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/src/components/Drawer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/src/components/RegistrationPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/src/components/RegistrationPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-flow/src/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vue-flow/src/services.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +88,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/Админ/Desktop/project/ORM/sql_app/main.py",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Админ/Desktop/project/ORM/sql_app/main.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Админ\Desktop\project\ORM\sql_app" />
+      <recent name="C:\Users\Админ\Desktop\project\ORM" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="ORM" />
@@ -50,7 +113,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sql_app/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Админ\Desktop\project\ORM\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
