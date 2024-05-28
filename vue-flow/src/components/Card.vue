@@ -24,7 +24,7 @@ defineProps({
           :src="imageUrl"
           alt="Logotype"
           class="logo1"
-          style="height: 200px; border-radius: 10px"
+          style="width: 200px; border-radius: 10px"
         />
         <p>{{ title }}</p>
         <div class="flex">
@@ -67,13 +67,11 @@ defineProps({
 
 .container {
   display: flex;
-  padding: 30px;
 }
 
 .content {
   display: flex;
   flex-direction: column; /* Располагаем элементы в столбец */
-  align-items: center; /* Располагаем элементы по центру по горизонтали */
 }
 .absolute {
   position: absolute;

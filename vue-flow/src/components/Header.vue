@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import Drawer from './Drawer.vue'
+</script>
 
 <template>
   <header class="head">
@@ -13,17 +15,17 @@
       <ul class="flex items-center justify-center align-center">
         <li class="hover:-translate-y-2">
           <img src="/cart-shopping.svg" alt="Basket" class="basket" />
-          <b>Корзина</b>
+          <b class="clickable">1200 руб.</b>
         </li>
 
         <li class="hover:-translate-y-2">
-          <img src="/bookmark-svgrepo.svg" alt="Basket" class="basket" />
-          <b>Закладки</b>
+          <img src="/heart.svg" alt="Basket" class="basket" />
+          <b class="clickable">Закладки</b>
         </li>
 
         <li class="hover:-translate-y-2">
           <img src="/profile-round.svg" alt="Basket" class="basket" />
-          <b>Профиль</b>
+          <b class="clickable">Профиль</b>
         </li>
       </ul>
     </div>
@@ -32,6 +34,18 @@
 </template>
 
 <style>
+.b {
+  font: bold;
+}
+b.clickable {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+.li {
+  cursor: pointer;
+}
 html,
 body {
   margin: 0; /* Убираем внешние отступы */
@@ -72,6 +86,7 @@ ul {
 }
 
 .basket {
+  margin-right: 9px;
   width: 15px; /* Установите нужную ширину */
   height: auto; /* Автоматически подстраиваем высоту */
 }

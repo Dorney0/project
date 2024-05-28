@@ -1,27 +1,34 @@
 <script setup>
+import { ref, onMounted } from 'vue'
+import { getFlowers } from '@/services'
+import Flower from '@/domain/Flower'
 import Card from './Card.vue'
 
-const onClickAdd = () => {
-  alert('Добавить')
+const flowers = ref([])
+
+const fetchFlowers = async () => {
+  try {
+    const serverResponse = await getFlowers()
+    flowers.value = serverResponse
+  } catch (error) {
+    console.error('Error fetching flowers:', error)
+  }
 }
+
+onMounted(() => {
+  fetchFlowers()
+})
 </script>
+
 <template>
   <div class="flex-container bg-white">
     <Card
-      title="Красные розы"
-      image-url="/red-roses.jpg"
-      :price="20000"
-      :is-Added="true"
-      :isFavorite="true"
-      :onClickAdd="onClickAdd"
+      v-for="flower in flowers"
+      :key="flower.id"
+      :title="flower.name"
+      :image-url="flower.imageUrl"
+      :price="flower.price"
     />
-    <Card title="Розовые розы" image-url="/pink-roses.jpg" price="10000" />
-    <Card title="Белые розы" image-url="/white_roses.jpg" price="30000" />
-    <Card title="Розы" image-url="/hand-holdings.jpg" price="40000" />
-    <Card title="Розы" image-url="/red-roses.jpg" price="50000" />
-    <Card title="Розы" image-url="/red-roses.jpg" price="60000" />
-    <Card title="Розы" image-url="/red-roses.jpg" price="70000" />
-    <Card title="Розы" image-url="/red-roses.jpg" price="80000" />
   </div>
 </template>
 
@@ -48,7 +55,6 @@ const onClickAdd = () => {
 
 .container {
   display: flex;
-  padding: 30px;
 }
 
 .content {

@@ -1,15 +1,21 @@
 <script setup>
 import Header from './components/Header.vue'
 import CardList from './components/CardList.vue'
-import Drawer from './components/Drawer.vue'
 </script>
 
 <template>
-  <Drawer />
   <Header />
   <div class="container1">
-    <h2>Все цветы</h2>
-    <Register />
+    <div class="header-container">
+      <h2>Все цветы</h2>
+      <select class="custom-select">
+        <option>Cортировка цветов</option>
+        <option>По названию</option>
+        <option>По цене (дешёвые)</option>
+        <option>По цене (дорогие)</option>
+      </select>
+      <div class="find"><input placeholder="Поиск..." /></div>
+    </div>
     <div class="flex-container bg-white">
       <CardList />
     </div>
@@ -17,6 +23,32 @@ import Drawer from './components/Drawer.vue'
 </template>
 
 <style>
+.custom-select {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.find input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 .container1 {
   padding: 20px;
   margin-top: 150px;

@@ -1,22 +1,37 @@
 <template>
-  <div class="container mt-4">
+  <div class="container2">
     <div class="row">
       <div class="col-sm-4 mx-auto">
-        <form @submit.prevent="registerUser" novalidate>
+        <form @submit.prevent="registerUser" novalidate class="custom-form">
           <div v-show="step === 1" class="step">
             <div class="form-group">
               <label for="name">Ваше имя</label>
-              <input v-model="formReg.name" type="text" class="form-control" id="name" />
+              <input v-model="formReg.name" type="text" class="form-control" id="name" required />
+              <span v-if="errors.name" class="text-danger">{{ errors.name }}</span>
             </div>
 
             <div class="form-group">
               <label for="surname">Ваша фамилия</label>
-              <input v-model="formReg.surname" type="text" class="form-control" id="surname" />
+              <input
+                v-model="formReg.surname"
+                type="text"
+                class="form-control"
+                id="surname"
+                required
+              />
+              <span v-if="errors.surname" class="text-danger">{{ errors.surname }}</span>
             </div>
 
             <div class="form-group">
               <label for="email">Email</label>
-              <input v-model="formReg.email" type="text" class="form-control" id="email" />
+              <input
+                v-model="formReg.email"
+                type="email"
+                class="form-control"
+                id="email"
+                required
+              />
+              <span v-if="errors.email" class="text-danger">{{ errors.email }}</span>
             </div>
 
             <button @click="nextStep" type="button" class="btn btn-primary">Следующий шаг</button>
@@ -31,7 +46,10 @@
                   type="password"
                   class="form-control"
                   id="password"
+                  required
+                  minlength="6"
                 />
+                <span v-if="errors.password" class="text-danger">{{ errors.password }}</span>
               </div>
 
               <div class="form-group">
@@ -41,7 +59,11 @@
                   type="password"
                   class="form-control"
                   id="passwordConfirm"
+                  required
                 />
+                <span v-if="errors.passwordConfirm" class="text-danger">{{
+                  errors.passwordConfirm
+                }}</span>
               </div>
 
               <button @click="backStep" type="button" class="btn btn-light mr-2">Назад</button>
@@ -58,17 +80,22 @@
                   type="text"
                   class="form-control"
                   id="phonenumber"
+                  required
+                  pattern="^\+?[1-9]\d{1,14}$"
                 />
+                <span v-if="errors.phonenumber" class="text-danger">{{ errors.phonenumber }}</span>
               </div>
 
               <div class="form-group">
                 <label for="birthdate">Дата рождения</label>
                 <input
                   v-model="formReg.birthdate"
-                  type="text"
+                  type="date"
                   class="form-control"
                   id="birthdate"
+                  required
                 />
+                <span v-if="errors.birthdate" class="text-danger">{{ errors.birthdate }}</span>
               </div>
 
               <button @click="backStep" type="button" class="btn btn-light mr-2">Назад</button>
@@ -80,61 +107,35 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import { ref } from 'vue'
+import { step, formReg, errors, nextStep, backStep, registerUser } from '../utils/formValidation.js'
 import axios from 'axios'
-
-const step = ref(1)
-const formReg = ref({
-  name: '',
-  surname: '',
-  email: '',
-  password: '',
-  passwordConfirm: '',
-  phonenumber: '',
-  birthdate: ''
-})
-
-const nextStep = () => {
-  if (step.value < 3) {
-    step.value++
-  }
-}
-
-const backStep = () => {
-  if (step.value > 1) {
-    step.value--
-  }
-}
-
-const registerUser = async () => {
-  try {
-    const response = await axios.post('http://127.0.0.1:8000/register', formReg.value)
-    console.log(response.data.message)
-    // Очистка формы после успешной регистрации
-    resetForm()
-  } catch (error) {
-    console.error('Ошибка:', error)
-  }
-}
-
-const resetForm = () => {
-  formReg.value = {
-    name: '',
-    surname: '',
-    email: '',
-    password: '',
-    passwordConfirm: '',
-    phonenumber: '',
-    birthdate: ''
-  }
-}
 </script>
 
 <style>
-.container {
-  margin-top: 150px;
+.text-danger {
+  color: red;
+}
+.form-group {
+  width: 200px;
+}
+label {
+  white-space: nowrap;
+}
+.custom-form {
+  width: 20px; /* Задаем фиксированную ширину */
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container2 {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide-fade-enter-active {
@@ -158,6 +159,7 @@ const resetForm = () => {
 
 /* Класс btn определяет стили для кнопок */
 .btn {
+  margin-top: 10px;
   display: inline-block;
   font-weight: 400;
   text-align: center;
