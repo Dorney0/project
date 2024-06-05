@@ -1,26 +1,38 @@
-<script setup>
-import Header from './components/Header.vue'
-import CardList from './components/CardList.vue'
-</script>
-
 <template>
-  <Header />
-  <div class="container1">
-    <div class="header-container">
-      <h2>Все цветы</h2>
-      <select class="custom-select">
-        <option>Cортировка цветов</option>
-        <option>По названию</option>
-        <option>По цене (дешёвые)</option>
-        <option>По цене (дорогие)</option>
-      </select>
-      <div class="find"><input placeholder="Поиск..." /></div>
-    </div>
-    <div class="flex-container bg-white">
-      <CardList />
+  <div>
+    <Drawer v-if="isDrawerOpen" />
+    <Header />
+    <div class="container1">
+      <div class="header-container">
+        <h2>Все цветы</h2>
+        <select class="custom-select">
+          <option>Cортировка цветов</option>
+          <option>По названию</option>
+          <option>По цене (дешёвые)</option>
+          <option>По цене (дорогие)</option>
+        </select>
+        <div class="find"><input placeholder="Поиск..." /></div>
+      </div>
+      <div class="flex-container bg-white">
+        <CardList />
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+import Drawer from './components/Drawer.vue'
+import Header from './components/Header.vue'
+import CardList from './components/CardList.vue'
+
+export default {
+  components: {
+    Drawer,
+    Header,
+    CardList
+  }
+}
+</script>
 
 <style>
 .custom-select {

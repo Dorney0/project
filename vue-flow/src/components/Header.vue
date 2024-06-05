@@ -13,19 +13,34 @@ import Drawer from './Drawer.vue'
     </div>
     <div class="list-container">
       <ul class="flex items-center justify-center align-center">
-        <li class="hover:-translate-y-2">
-          <img src="/cart-shopping.svg" alt="Basket" class="basket" />
-          <b class="clickable">1200 руб.</b>
+        <li class="hover:-translate-y-2 no-wrap">
+          <router-link to="/Home" class="flex" items-center no-wrap
+            ><b class="clickable">Главная</b></router-link
+          >
+        </li>
+        <li class="hover:-translate-y-2 no-wrap">
+          <router-link to="/Createflowers" class="flex" items-center no-wrap
+            ><b class="clickable">Создать свой букет</b></router-link
+          >
+        </li>
+        <div class="space"></div>
+        <li class="hover:-translate-y-2 no-wrap">
+          <router-link to="/Drawer" class="flex items-center no-wrap">
+            <img src="/cart-shopping.svg" alt="Basket" class="basket" />
+            <b class="clickable">1200 руб.</b>
+          </router-link>
         </li>
 
-        <li class="hover:-translate-y-2">
+        <li class="hover:-translate-y-2 no-wrap">
           <img src="/heart.svg" alt="Basket" class="basket" />
           <b class="clickable">Закладки</b>
         </li>
 
-        <li class="hover:-translate-y-2">
-          <img src="/profile-round.svg" alt="Basket" class="basket" />
-          <b class="clickable">Профиль</b>
+        <li class="hover:-translate-y-2 no-wrap">
+          <router-link to="/RegistrationPage" class="flex items-center no-wrap">
+            <img src="/profile-round.svg" alt="Profile" class="basket" />
+            <b class="clickable">Профиль</b>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -34,8 +49,23 @@ import Drawer from './Drawer.vue'
 </template>
 
 <style>
+.router-link-exact-active {
+  text-decoration: none;
+  color: black;
+}
+.space {
+  width: 100%;
+}
 .b {
   font: bold;
+}
+b.clickable1 {
+  left: 0;
+  left: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
 }
 b.clickable {
   font-size: 22px;

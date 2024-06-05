@@ -13,31 +13,35 @@ defineProps({
   <div class="container cursor-pointer">
     <div class="content">
       <div class="item item:hover hover:-translate-y-2">
-        <img
-          :src="!isFavorite ? '/like-1.svg' : '/like-2.svg'"
-          alt="Logotype"
-          class="absolute"
-          style="height: 20px; border-radius: 2px; padding: 5px"
-          @click="onClickFavorite"
-        />
-        <img
-          :src="imageUrl"
-          alt="Logotype"
-          class="logo1"
-          style="width: 200px; border-radius: 10px"
-        />
-        <p>{{ title }}</p>
-        <div class="flex">
-          <div class="flex-col">
-            <span>Цена</span>
-            <b>{{ price }} руб.</b>
-          </div>
+        <div>
           <img
-            @click="onClickAdd"
-            :src="!isAdded ? '/plus.svg' : '/checked.svg'"
-            alt="Plus"
-            class="small-img"
+            :src="!isFavorite ? '/like-1.svg' : '/like-2.svg'"
+            alt="Logotype"
+            class="absolute"
+            style="height: 20px; border-radius: 2px; padding: 5px"
+            @click="onClickFavorite"
           />
+          <img
+            :src="imageUrl"
+            alt="Logotype"
+            class="logo1"
+            style="width: 200px; border-radius: 10px"
+          />
+        </div>
+        <div>
+          <p>{{ title }}</p>
+          <div class="flex">
+            <div class="flex-col">
+              <span>Цена</span>
+              <b>{{ price }} руб.</b>
+            </div>
+            <img
+              @click="onClickAdd"
+              :src="!isAdded ? '/plus.svg' : '/checked.svg'"
+              alt="Plus"
+              class="small-img"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -77,6 +81,8 @@ defineProps({
   position: absolute;
 }
 .item {
+  height: 100%;
+  justify-content: space-between;
   display: flex;
   flex-direction: column; /* Располагаем элементы в столбец */
 }

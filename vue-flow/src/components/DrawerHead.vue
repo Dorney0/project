@@ -1,5 +1,5 @@
 <template>
-  <div class="custom-container">
+  <div class="custom-container" @click="goHome">
     <svg
       class="arrow"
       width="16"
@@ -26,6 +26,15 @@
     <h2>Корзина</h2>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    goHome() {
+      this.$router.push('/Home')
+    }
+  }
+}
+</script>
 <style>
 .custom-container {
   align-items: center;

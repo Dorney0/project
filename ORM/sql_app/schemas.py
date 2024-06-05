@@ -1,9 +1,10 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class ItemBase(BaseModel):
     title: str
-    description: str | None = None
+    description: Optional[str] = None
 
 
 class ItemCreate(ItemBase):
@@ -26,6 +27,12 @@ class UserCreate(UserBase):
     password: str
 
 
+class UserUpdate(BaseModel):
+    email: Optional[str] = None
+    password: Optional[str] = None
+    is_active: Optional[bool] = None
+
+
 class User(UserBase):
     id: int
     is_active: bool
@@ -40,8 +47,16 @@ class FlowerBase(BaseModel):
     image_url: str
     price: int
 
+
 class FlowerCreate(FlowerBase):
     pass
+
+
+class FlowerUpdate(BaseModel):
+    name: Optional[str] = None
+    image_url: Optional[str] = None
+    price: Optional[int] = None
+
 
 class Flower(FlowerBase):
     id: int

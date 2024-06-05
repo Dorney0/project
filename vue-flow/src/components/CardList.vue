@@ -1,7 +1,6 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { getFlowers } from '@/services'
-import Flower from '@/domain/Flower'
 import Card from './Card.vue'
 
 const flowers = ref([])
@@ -10,10 +9,18 @@ const fetchFlowers = async () => {
   try {
     const serverResponse = await getFlowers()
     flowers.value = serverResponse
+    console.log('Loaded flowers:', flowers.value) // Логируем загруженные цветы
   } catch (error) {
     console.error('Error fetching flowers:', error)
   }
 }
+
+// Вычисляемое свойство для фильтрации цветов
+const filteredFlowers = computed(() => {
+  const result = flowers.value.filter((flower) => flower.name.toLowerCase().includes('букет'))
+  console.log('Filtered flowers:', result) // Логируем отфильтрованные цветы
+  return result
+})
 
 onMounted(() => {
   fetchFlowers()
@@ -23,7 +30,7 @@ onMounted(() => {
 <template>
   <div class="flex-container bg-white">
     <Card
-      v-for="flower in flowers"
+      v-for="flower in filteredFlowers"
       :key="flower.id"
       :title="flower.name"
       :image-url="flower.imageUrl"

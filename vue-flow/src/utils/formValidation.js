@@ -86,7 +86,7 @@ const validateForm = (currentStep) => {
 
   if (currentStep >= 1) {
     if (!formReg.value.name) {
-      errors.value.name = 'Имя обязательно'
+      errors.value.name = '  Имя обязательно'
       valid = false
     } else if (hasNumbers(formReg.value.name)) {
       errors.value.name = 'Имя не должно содержать цифр'
